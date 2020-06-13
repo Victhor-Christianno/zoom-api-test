@@ -15,8 +15,8 @@
 
     testTool = window.testTool;
     document.getElementById('display_name').value = "Teste Api"
-    document.getElementById('meeting_number').value = 0 // PMI number;
-    document.getElementById('meeting_pwd').value = "" // PMI password;
+    document.getElementById('meeting_number').value = 0; // PMI Number
+    document.getElementById('meeting_pwd').value = ""; // PMI Pass
     if (testTool.getCookie("meeting_lang")) document.getElementById('meeting_lang').value = testTool.getCookie("meeting_lang");
    
     document.getElementById('meeting_lang').addEventListener('change', function(e){
@@ -45,9 +45,9 @@
             apiSecret: API_SECRET,
             meetingNumber: document.getElementById('meeting_number').value,
             userName: document.getElementById('display_name').value,
-			userEmail: 'api.test@gmail.com',
+			userEmail: 'victhor.silva@i2tech.com.br',
             passWord: document.getElementById('meeting_pwd').value,
-            leaveUrl: "www.google.com",
+            leaveUrl: "http://www.google.com",
             role: document.getElementById('meeting_role').value
         };
         testTool.setCookie("meeting_number", meetConfig.meetingNumber);
@@ -65,7 +65,7 @@
         });
 
         ZoomMtg.init({
-            leaveUrl: 'www.google.com',
+            leaveUrl: 'http://www.google.com',
             success: function () {
                 ZoomMtg.join(
                     {
